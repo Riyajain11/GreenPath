@@ -1,0 +1,73 @@
+<% layout("/layouts/boilerplate") %>
+<body> 
+  <div class="row"> 
+    <div class="col-8 offset-2">
+      <br>
+    <h3>Add New</h3> 
+    <form method="POST" action="/farmerslistings" novalidate class="needs-validation">  
+      <div class="mb-3">
+        <label for="name" class="form-label">Enter Your Name:</label>
+        <input
+         name="listing[name]"
+         type="text"
+        placeholder="Enter a Name" 
+        class="form-control" 
+        required> 
+        <div class="valid-feedback">Good Name!</div>
+       </div> 
+      
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="name" class="form-label">Enter Your City:</label>
+          <input 
+          name="listing[city]" 
+          type="text"
+          placeholder="Enter a city"
+          class="form-control"
+          required> 
+          <div class="invalid-feedback">Please enter your location!</div> 
+          </div> 
+
+          <div class="mb-3 col-md-8">
+          <label for="name" class="form-label">Enter Your State:</label>
+          <input 
+          name="listing[state]" 
+          type="text"
+          placeholder="Enter a State"
+          class="form-control" 
+          required> 
+          <div class="invalid-feedback">Please enter state!</div>
+          </div>
+      </div>
+       
+        <div class="mb-3">
+          <label for="name" class="form-label">Enter Your Items:</label>
+         <input 
+         name="listing[items]" 
+         type="text"
+         placeholder="Enter a crop" 
+         class="form-control" 
+         required> 
+         </div> 
+         <div class="mb-3">
+          <label for="name" class="form-label">Enter Your Image Url:</label>
+          <input 
+          name="listing[image]" 
+          placeholder="Enter a imageURL /Link" 
+          class="form-control"> 
+        </div>  
+        <div class="mb-3">
+          <label for="name" class="form-label">Enter Your Price:</label>
+         <input 
+         name="listing[price]" 
+         placeholder="Enter a price" 
+         
+         class="form-control" 
+         required> 
+         <div class="invalid-feedback">Enter a valid Price!</div>
+        </div> 
+    <button type="submit" class="btn btn-dark add-btn">Add</button>
+    <br><br>
+    </form> 
+  </div>
+ </div>

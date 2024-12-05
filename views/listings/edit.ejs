@@ -1,0 +1,71 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+   <div class="row mt-3">
+    <div class="col-8 offset-2">
+    <h3> Edit Your Details </h3> 
+    <form 
+    method="POST" 
+    action="/farmerslistings/<%= listing._id %>?_method=PUT" 
+    novalidate
+    class="needs-validation">
+
+      <div class="mb-3">
+        <label for="name" class="form-label"> Name:</label>
+        <input 
+        name="listing[name]" 
+        value="<%= listing.name %>" 
+        class="form-control" 
+        required>
+        <div class="valid-feedback">Good Name!</div> 
+      </div>
+      <div class="row">
+      <div class="mb-3 col-md-4">
+        <label for="name" class="form-label"> City:</label>
+        <input 
+        name="listing[city]" 
+        value="<%= listing.city %>" 
+        class="form-control" 
+        required>
+        <div class="invalid-feedback">Please enter your location!</div> 
+       </div>
+       <div class="mb-3 col-md-8">
+        <label for="name" class="form-label"> State:</label>
+        <input 
+        name="listing[state]"  
+        value="<%= listing.state %>" 
+        class="form-control" 
+        required> 
+        <div class="invalid-feedback">Please enter your State!</div> 
+        </div>
+      </div>
+        <div class="mb-3">
+          <label for="name" class="form-label"> Items:</label>
+        <input 
+        name="listing[items]"  
+        value="<%= listing.items %>" 
+        class="form-control" 
+        required>
+        <div class="invalid-feedback">Enter your items!</div> 
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label"> Images:</label>
+    <input 
+    name="listing[image]"  
+    value="<%= listing.image %>" 
+    class="form-control">
+     
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label"> Price:</label>
+      <input 
+      name="listing[price]"  
+      value="<%= listing.price %>" 
+      class="form-control" 
+      required> 
+      <div class="invalid-feedback">Enter price!</div> 
+    </div>
+<button type="submit" class="btn btn-dark add-btn mt-3">Edit</button>
+    </form>
+  </div>
+</div>
+<script src="/js/script.js"></script>
